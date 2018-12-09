@@ -37,3 +37,4 @@ echo "y" | /usr/share/logstash/bin/logstash-keystore create
 echo "Setting ELASTIC_PASSWORD..."
 echo "$ELASTIC_PASSWORD" | /usr/share/logstash/bin/logstash-keystore add 'ELASTIC_PASSWORD' -x
 mv /usr/share/logstash/config/logstash.keystore /config/logstash/logstash.keystore
+docker exec -it logstash ./bin/logstash-plugin install logstash-input-beats
